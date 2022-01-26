@@ -6,4 +6,4 @@ it displays the raw data in a table, and provides visualizations of the predicte
 to predict the last value out of a sequence of values. 
 
 ## Link To WebApp
-you can view the Streamlit App in your browser via the Local URL: http://localhost:8502
+you can view the Streamlit App in your browser via the Local URL: http://localhost:8501/
