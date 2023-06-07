@@ -37,21 +37,34 @@ This will start the Streamlit server and open the application in your default br
 
 ## How it Works
 
-The predictions are made using a multi-layer LSTM recurrent neural network to predict the last value out of a sequence of values. The raw data is displayed in a table and the predicted versus original values are visualized in a line graph. The web application is created using Streamlit, a Python library for building web applications. 
-
-Note: I have recently added various different trading strategies. Feel free to implement and test each each model individually.
-
-## Custom Strategy Signal
-
-I developed a custom strategy signal using the x-gradient boosting model. This signal incorporates support and resistance levels, price movements, and candlestick patterns to detect reversals in the trend. The custom strategy signal has shown positive returns in a classical passive strategy, making it a promising addition to ML and neural networks.
-
-## Neural Network Model
-
-The chosen model for this project is a supervised neural network classifier with technical indicators as input features (e.g. RSI, MA Slope, SAR slope, and a custom strategy signal). The goal is to predict whether the trend will be up or down, resulting in two categories: 1 (up) or 0 (down). The main challenge in such models lies in determining the optimal number of hidden layers and nodes between the input features and the final output results.
-
-The number of hidden layers can range from one to a large number, and the number of nodes can vary from one to a few hundred. Finding the optimal configuration requires experimentation and a trial-and-error approach, taking into account the expertise of the data scientist building the model.
+The predictions are made using a various algorithmic trading strategies to predict stock returns. The raw data is displayed in a table and the predicted versus original values are visualized in a line graph. The web application is created using Streamlit, a Python library for building web applications. 
 
 ## Data Preparation
 
-The project begins by fetching historical market data using Interactive Brokers native API. The data is then cleaned to ensure its quality and reliability. I split the data 60% for training and 40% for testing or validating the model.
+The project begins by fetching historical and real-time market data using Interactive Brokers' TWS API. The data is then cleaned to ensure its quality and reliability. I split the data 60% for training and 40% for testing the model.
 
+## Models
+
+### Long Short-term Memory RNN Model 
+
+This model is a recurrent neural network which is used to learn order dependence in sequence prediction problems. Due to its capability of storing past information, LSTM is very useful in predicting stock prices. This is because the prediction of a future stock price is dependent on the previous prices.
+
+### Custom Strategy Signal
+
+I developed a custom strategy signal using the x-gradient boosting model. This signal incorporates support and resistance levels, price movements, and candlestick patterns to detect reversals in the trend. The custom strategy signal has shown positive returns in a classical passive strategy, making it a promising addition to ML and neural networks.
+
+### Classification Model
+
+This model is a supervised neural network classifier with technical indicators as input features (e.g. RSI, MA Slope, SAR slope, and a custom strategy signal). The goal is to predict whether the trend will be up or down, resulting in two categories: 1 (up) or 0 (down). The main challenge in such models lies in determining the optimal number of hidden layers and nodes between the input features and the final output results.
+
+The number of hidden layers can range from one to a large number, and the number of nodes can vary from one to a few hundred. Finding the optimal configuration requires experimentation and a trial-and-error approach, taking into account the expertise of the data scientist building the model.
+
+### Logistic Regression Model
+
+This model uses logistic regression, a type of supervised learning algorithm used for classification, to predict the direction of the asset (+/-) as the dependent variable. The independent variable is the prior N days' asset directions. The logistic regression model uses a sigmoid function to produce a probability score, which is then thresholded to determine the predicted direction of the asset. 
+
+Note that this model assumes that there are no trading costs to simplify the problem. Additionally, the model focuses on predicting asset returns rather than absolute prices.
+
+## Future Work
+
+This project can be further improved by using more advanced machine learning algorithms such as neural networks and decision trees. Additionally, incorporating more features such as volume and news sentiment can improve the accuracy of the model.
