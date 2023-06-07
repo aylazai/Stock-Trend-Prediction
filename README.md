@@ -15,8 +15,6 @@ This project is a stock trend prediction web application created using Python an
 
 ## Installation
 
-To use this application, you will need to have Python 3 installed and a Binance account with API keys. Clone the repository and install the required dependencies using the following command:
-
 ```
 pip install -r requirements.txt
 ```
@@ -29,7 +27,7 @@ To start the application, run the following command:
 streamlit run app.py
 ```
 
-This will start the Streamlit server and open the application in your default browser. You can then input your Binance API keys and adjust the parameters as needed. The application will display the live signals for all available coins/cryptocurrencies on Binance and recommend trades based on the moving average crossover strategy.
+This will start the Streamlit server and open the application in your default browser. You can then experiemnt with the different trading startegies provided. The application will recommend trades based on the given strategy.
 
 ## How to Use
 
@@ -41,7 +39,7 @@ This will start the Streamlit server and open the application in your default br
 
 The predictions are made using a multi-layer LSTM recurrent neural network to predict the last value out of a sequence of values. The raw data is displayed in a table and the predicted versus original values are visualized in a line graph. The web application is created using Streamlit, a Python library for building web applications. 
 
-I have recently added various different trading strategies. Feel free to explore, experiment, and optimize each model individually.
+Note: I have recently added various different trading strategies. Feel free to implement and test each each model individually.
 
 ## Custom Strategy Signal
 
