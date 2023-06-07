@@ -27,7 +27,7 @@ To start the application, run the following command:
 streamlit run app.py
 ```
 
-This will start the Streamlit server and open the application in your default browser. You can then experiemnt with the different trading startegies provided. The application will recommend trades based on the given strategy.
+This will start the Streamlit server and open the application in your default browser. You can then experiment with the different trading strategies provided. The application will recommend trades based on the given strategy.
 
 ## How to Use
 
@@ -37,7 +37,7 @@ This will start the Streamlit server and open the application in your default br
 
 ## How it Works
 
-The predictions are made using a various algorithmic trading strategies to predict stock returns. The raw data is displayed in a table and the predicted versus original values are visualized in a line graph. The web application is created using Streamlit, a Python library for building web applications. 
+The predictions are made using various algorithmic trading strategies to predict stock returns. The raw data is displayed in a table and the predicted versus original values are visualized in a line graph. The web application is created using Streamlit, a Python library for building web applications. 
 
 ## Data Preparation
 
