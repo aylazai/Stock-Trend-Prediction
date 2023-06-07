@@ -1,4 +1,6 @@
-# Stock Trend Prediction WebApp
+# Stock Trend Prediction Web Application
+
+<img width="543" alt="image" src="https://user-images.githubusercontent.com/90855844/236690035-9bce1fa9-9b20-47e9-b6cf-660250ba831f.png">
 
 This project is a stock trend prediction web application created using Python and Streamlit. The purpose of this web application is to allow users to input stocks they wish to predict and view visualizations of the predicted versus original values.
 
